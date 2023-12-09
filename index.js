@@ -9,7 +9,7 @@ app.use(express.json());
 
 // setting cors
 const corsOptions = {
-  origin: ["https://anuragbookrecommendation.netlify.app"],
+  origin: ["https://anuragbookrecommendation.netlify.app/"],
   methods: ["GET", "PUT", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
