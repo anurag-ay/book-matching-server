@@ -6,7 +6,17 @@ const cors = require("cors");
 
 // built in Middleware
 app.use(express.json());
-app.use(cors());
+
+// setting cors
+const corsOptions = {
+  origin: ["https://anuragbookrecommendation.netlify.app"],
+  methods: ["GET", "PUT", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 // redirecting the urls to routes
 app.use("/api/student", require("./routes/studentRoutes"));
