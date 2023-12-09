@@ -15,7 +15,11 @@ app.use(express.json());
 //   optionsSuccessStatus: 200,
 // };
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://anuragbookrecommendation.netlify.app",
+  })
+);
 
 // redirecting the urls to routes
 app.use("/api/student", require("./routes/studentRoutes"));
