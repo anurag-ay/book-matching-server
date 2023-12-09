@@ -137,7 +137,7 @@ router.post("/login", async (req, res) => {
       "personalityVector",
       "readBooks",
     ]);
-    const token = jwt.sign(user, "sdfdsssssss");
+    const token = jwt.sign(user, process.env.JWT_PRIVATE_KEY);
     res.status(200).send(token);
   } catch (err) {
     console.log(err.message);
