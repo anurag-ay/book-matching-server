@@ -21,9 +21,9 @@ router.post("/", async (req, res) => {
       personalityVector: personalityVector,
       readBooks: scoreBook,
     };
-    await Student.findOneAndUpdate({ userName: userName }, updateData, {
-      new: true,
-    });
+    // await Student.findOneAndUpdate({ userName: userName }, updateData, {
+    //   new: true,
+    // });
 
     res.status(200).send(score);
   } catch (err) {
