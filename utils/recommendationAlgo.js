@@ -36,7 +36,7 @@ function mostSimilarVector(user, items) {
 
   // Return the most similar vector
   scores.sort((a, b) => b.similarity - a.similarity);
-  scores = scores.slice(0, 10);
+  scores = scores.slice(0, 9);
   return scores;
 }
 
