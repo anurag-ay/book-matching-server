@@ -8,14 +8,14 @@ const cors = require("cors");
 app.use(express.json());
 
 // setting cors
-const corsOptions = {
-  origin: ["*", "https://anuragbookrecommendation.netlify.app/"],
-  methods: ["GET", "PUT", "POST", "DELETE"],
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: ["*", "https://anuragbookrecommendation.netlify.app/"],
+//   methods: ["GET", "PUT", "POST", "DELETE"],
+//   credentials: true,
+//   optionsSuccessStatus: 200,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // redirecting the urls to routes
 app.use("/api/student", require("./routes/studentRoutes"));
