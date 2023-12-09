@@ -20,14 +20,9 @@ router.post("/", async (req, res) => {
     personalityVector: personalityVector,
     readBooks: scoreBook,
   };
-  // const student = await Student.findOneAndUpdate(
-  //   { userName: userName },
-  //   updateData,
-  //   { new: true }
-  // );
-  // student.genre = genres;
-  // student.personalityVector = personalityVector;
-  // student.readBooks = scoreBook;
+  await Student.findOneAndUpdate({ userName: userName }, updateData, {
+    new: true,
+  });
 
   res.status(200).send(score);
 });
