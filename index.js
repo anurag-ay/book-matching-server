@@ -21,5 +21,10 @@ mongoose
   .then(() => console.log("Connected to the mongoDB"))
   .catch((err) => console.log(err));
 
+// add home route
+app.get("/", (req, res) => {
+  res.send("This is Home");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
